@@ -6,15 +6,13 @@ echo view('partials/header');
         <div class="row">
             <div class="col">
                 <div class="p-2">
-                    <a href="#"><img src="../assets/img/logo.png" alt=""></a>
+                    <a href="#"><img src="assets/img/logo.png" alt=""></a>
                 </div>
             
             </div>
-            <div class="col d-contents">
-                <div class="p-2 float-end">
-                    <a href="<?php echo base_url('/logout'); ?>">Keluar</a>
-                </div>
-                
+            <div class="col d-flex justify-content-end align-items-center text-end w-100">
+                <!--<p>Welcome, <?// echo $username; ?></p>-->
+                <a class="" href="<?php echo base_url('/logout'); ?>">Logout</a>
             </div>
         </div>
     </div>
@@ -22,12 +20,13 @@ echo view('partials/header');
 
 <div class="container">
     <div class="row">
-    <div class="card book-shelf mt-4 p-3">
+    <div class="col-12">
+        <div class="card book-shelf m-2 p-4">
         <form id="formBook" id>
-            <h3>Books</h3>
+            <h3 class="fw-bold">Books</h3>
             <?php
-             $apiKey = 'AIzaSyAeW6qlHFOpcqW0dIWYLH764rYHvg11KyU'; // Ganti dengan API Key Anda
-             $query = 'Komputer'; // Ganti dengan query pencarian Anda
+             $apiKey = 'AIzaSyAeW6qlHFOpcqW0dIWYLH764rYHvg11KyU';
+             $query = 'Komputer';
          
              $response = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=".urlencode($query)."&key=".$apiKey);
              $data = json_decode($response, true);
@@ -61,7 +60,13 @@ echo view('partials/header');
                 }
             ?>
         </form>
+        </div>
+        
 
       </div>
     </div>
 </div>
+
+<?php
+echo view('partials/footer');
+?>

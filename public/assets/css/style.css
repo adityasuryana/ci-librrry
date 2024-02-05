@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'regular';
-    src: url('../assets/font/Cousine-Regular.ttf');
+    src: url('../../assets/font/Cousine-Regular.ttf');
 }
 
 @font-face {
     font-family: 'italic';
-    src: url('../assets/font/Cousine-Italic.ttf');
+    src: url('../../assets/font/Cousine-Italic.ttf');
 }
 
 
 @font-face {
     font-family: 'bold';
-    src: url('../assets/font/Cousine-Bold.ttf');
+    src: url('../../assets/font/Cousine-Bold.ttf');
 }
 
 @font-face {
     font-family: 'bolditalic';
-    src: url('../assets/font/Cousine-BoldItalic.ttf');
+    src: url('../../assets/font/Cousine-BoldItalic.ttf');
 }
 
 a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 body {
