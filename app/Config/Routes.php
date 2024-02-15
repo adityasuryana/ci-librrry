@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home', ['filter' => 'login']);
+$routes->post('/home', 'Home', ['filter' => 'login']);
 $routes->get('/home', 'Home::index', ['filter' => 'login']);
 
 //routing login (beta)

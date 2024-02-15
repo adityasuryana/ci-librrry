@@ -36,6 +36,20 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.page-link {
+  color: black;
+}
+
+.page-link:hover {
+  color: #8A3B00;
+}
+
+.page-link.active, .active > .page-link {
+  background-color: #8A3B00!important;
+  color: white!important;
+  border: none;
+}
+
 .btn {
   color: black;
 }
